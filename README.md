@@ -1,1 +1,5 @@
-# react-clone-airbnb
+# Projet React - Airbnb
+
+## Technologies utilisées
+
+Framework : React
