@@ -1,4 +1,4 @@
-# Projet React - Airbnb
+# Airbnb clone with React
 
 ## Technologies utilisées
 
