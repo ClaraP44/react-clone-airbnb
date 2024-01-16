@@ -9,7 +9,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <Hello firstName="Clara" lastName="Pécot"/>
-    <Hello firstName="Romain" lastName="Durant"/>
+    <Hello firstName="Angélina" lastName="Durant"/>
   </React.StrictMode>
 );
 
