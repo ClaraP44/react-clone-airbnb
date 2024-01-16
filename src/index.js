@@ -8,7 +8,8 @@ import Hello from './components/hello';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Hello />
+    <Hello firstName="Clara" lastName="Pécot"/>
+    <Hello firstName="Romain" lastName="Durant"/>
   </React.StrictMode>
 );
 
