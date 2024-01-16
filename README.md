@@ -1,4 +1,4 @@
-# Airbnb en React
+# Clone d'Airbnb (React)
 
 Construction d'un clone d'Airbnb avec React.
 
