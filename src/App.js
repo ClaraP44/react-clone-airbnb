@@ -20,6 +20,9 @@ class App extends Component {
           <div className="search">
           </div>
           <div className="flats">
+            <Flat flat={flat} />
+            <Flat flat={flat} />
+            <Flat flat={flat} />
           </div>
         </div>
 
