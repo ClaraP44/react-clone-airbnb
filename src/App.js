@@ -11,18 +11,18 @@ class App extends Component {
     };
   }
 
+  componentDidMount() {
+    const url = "https://raw.githubusercontent.com/lewagon/flats-boilerplate/master/flats.json";
+    fetch(url) // AJAX
+      .then(response => response.json())
+      .then((data) => {
+        this.setState({
+          flats: data
+        });
+      })
+  }
+
   render() {
-    // const flat = {
-    //   "name": "Trendy Apt in Buttes Montmartre",
-    //   "imageUrl": "https://raw.githubusercontent.com/lewagon/flats-boilerplate/master/images/flat2.jpg",
-    //   "price": 200,
-    //   "priceCurrency": "EUR",
-    //   "lat": 48.885707,
-    //   "lng": 2.343543
-    // };
-
-    // const flats = [ flat, flat, flat, flat ];
-
     return (
       <div className="app">
         <div className="main">
