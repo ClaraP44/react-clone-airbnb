@@ -38,7 +38,7 @@ class App extends Component {
           </div>
           <div className="flats">
             {this.state.flats.map((flat) => {
-              return <Flat flat={flat}/>
+              return <Flat key={flat.name} flat={flat}/>
             })}
           </div>
         </div>
