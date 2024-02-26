@@ -10,7 +10,8 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      flats: []
+      flats: [],
+      selectedFlat: null
     };
   }
 
@@ -26,13 +27,22 @@ class App extends Component {
   }
 
   selectFlat = (flat) => {
-    console.log(flat);
+    this.setState({
+      selectedFlat: flat
+    })
   }
 
   render() {
-    const center = {
+    let center = {
       lat: 48.866667,
       lng: 2.333333
+    }
+
+    if (this.state.selectedFlat) {
+      center = {
+        lat: this.state.selectedFlat.lat,
+        lng: this.state.selectedFlat.lng
+      }
     }
 
     return (
@@ -45,7 +55,7 @@ class App extends Component {
               return <Flat
                 key={flat.name}
                 flat={flat}
-                handleClick={this.selectFlat} />
+                selectFlat={this.selectFlat} />
             })}
           </div>
         </div>
