@@ -63,7 +63,7 @@ class App extends Component {
         <div className="map">
           <GoogleMapReact
             center={center}
-            zoom={11}>
+            zoom={13} >
             {this.state.flats.map((flat) => {
               return <Marker
                 key={flat.name}
