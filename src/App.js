@@ -21,7 +21,8 @@ class App extends Component {
       .then(response => response.json())
       .then((data) => {
         this.setState({
-          flats: data
+          flats: data,
+          selectedFlat: data[0]
         });
       })
   }
@@ -29,14 +30,14 @@ class App extends Component {
   selectFlat = (flat) => {
     this.setState({
       selectedFlat: flat
-    })
+    });
   }
 
   render() {
     let center = {
       lat: 48.866667,
       lng: 2.333333
-    }
+    };
 
     if (this.state.selectedFlat) {
       center = {
@@ -44,7 +45,6 @@ class App extends Component {
         lng: this.state.selectedFlat.lng
       }
     }
-
     return (
       <div className="app">
         <div className="main">

@@ -11,4 +11,5 @@
 .marker .selected {
   background-color: yellow;
   border-color: black;
+  font-weight: bold;
 }
