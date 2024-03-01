@@ -45,10 +45,17 @@ class App extends Component {
         lng: this.state.selectedFlat.lng
       }
     }
+
     return (
       <div className="app">
         <div className="main">
           <div className="search">
+            <input
+              type="text"
+              placeholder="Search..."
+              value={this.state.search}
+              onChange={this.handleSearch}
+            />
           </div>
           <div className="flats">
             {this.state.flats.map((flat) => {
