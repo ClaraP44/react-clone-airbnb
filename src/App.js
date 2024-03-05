@@ -11,7 +11,8 @@ class App extends Component {
     super(props);
     this.state = {
       flats: [],
-      selectedFlat: null
+      selectedFlat: null,
+      search: ""
     };
   }
 
@@ -30,6 +31,12 @@ class App extends Component {
   selectFlat = (flat) => {
     this.setState({
       selectedFlat: flat
+    });
+  }
+
+  handleSearch = (event) => {
+    this.setState({
+      search: event.target.value,
     });
   }
 
