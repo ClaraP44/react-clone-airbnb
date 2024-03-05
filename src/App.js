@@ -18,14 +18,14 @@ class App extends Component {
   }
 
   componentDidMount() {
-    const url = "https://raw.githubusercontent.com/lewagon/flats-boilerplate/master/flats.json";
-    fetch(url) // AJAX
+    fetch("https://raw.githubusercontent.com/lewagon/flats-boilerplate/master/flats.json")
       .then(response => response.json())
       .then((data) => {
         this.setState({
+          allFlats: data,
           flats: data,
-          allFlats: data
-        });
+          selectedFlat: data[0]
+        })
       })
   }
 
@@ -39,7 +39,7 @@ class App extends Component {
     this.setState({
       search: event.target.value,
       flats: this.state.allFlats.filter((flat) => new RegExp(event.target.value, "i").exec(flat.name))
-    });
+    })
   }
 
   render() {
@@ -93,7 +93,6 @@ class App extends Component {
       </div>
     );
   }
-
 }
 
 export default App;
