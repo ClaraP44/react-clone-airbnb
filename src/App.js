@@ -11,6 +11,7 @@ class App extends Component {
     super(props);
     this.state = {
       flats: [],
+      allFlats: [],
       selectedFlat: null,
       search: ""
     };
@@ -23,7 +24,7 @@ class App extends Component {
       .then((data) => {
         this.setState({
           flats: data,
-          selectedFlat: data[0]
+          allFlats: data
         });
       })
   }
@@ -37,6 +38,7 @@ class App extends Component {
   handleSearch = (event) => {
     this.setState({
       search: event.target.value,
+      flats: this.state.allFlats.filter((flat) => new RegExp(event.target.value, "i").exec(flat.name))
     });
   }
 
